@@ -3,9 +3,9 @@ package main.java.net.proselyte.javase.chapter06;
 /**
  * @author Fominykh Vladimir
  *
- * В этой программе определяются два объекта класса Box
+ * Теперь метод volume() возвращает объем параллелепипеда
  */
-public class BoxDemo2 {
+public class BoxDemo4 {
     public static void main(String[] args) {
         Box mybox1 = new Box();
         Box mybox2 = new Box();
@@ -21,12 +21,12 @@ public class BoxDemo2 {
         mybox2.height = 6;
         mybox2.depth = 9;
 
-        // рассчитать объем первого параллепипеда
-        vol = mybox1.width * mybox1.height * mybox1.depth;
+        // вывести объем первого параллелепипеда
+        vol = mybox1.volume();
         System.out.println("Объем равен " + vol);
 
-        // рассчитать объем второго параллепипеда
-        vol = mybox2.width * mybox2.height * mybox2.depth;
+        // вывести объем второго параллелепипеда
+        vol = mybox2.volume();
         System.out.println("Объем равен " + vol);
 
     }
