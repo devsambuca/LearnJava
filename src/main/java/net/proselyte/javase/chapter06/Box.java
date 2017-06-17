@@ -11,6 +11,21 @@ public class Box {
     double height;
     double depth;
 
+    Box() {
+        System.out.println("Конструирование объекта Box");
+        width = 10;
+        height = 10;
+        depth = 10;
+    }
+
+    // рассчитать и вовратить объем
+    double volume() {
+        return width * height * depth;
+    }
+
+/*
+    BoxDemo5
+
     // вывести объем параллелепипеда
     double volume() {
         return width * height * depth;
@@ -22,4 +37,6 @@ public class Box {
             height = h;
             depth = d;
     }
+
+*/
 }
