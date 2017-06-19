@@ -5,7 +5,7 @@ package main.java.net.proselyte.javase.chapter06;
  *         <p>
  *         В данном примере программы  для инициалихации размеров параллелепипела в классе BOx
  *         применяется констрктор
- */
+ *
 public class BoxDemo6 {
     public static void main(String[] args) {
         //объявить, выделить память и инициализировать объекты типа Box
@@ -23,3 +23,4 @@ public class BoxDemo6 {
 
     }
 }
+*/

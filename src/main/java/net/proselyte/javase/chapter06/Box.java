@@ -5,6 +5,29 @@ package main.java.net.proselyte.javase.chapter06;
  *
  * В программе применяется метод с параметрами
  */
+
+ class Box {
+    double width;
+    double height;
+    double depth;
+
+    //Это конструктор класса Box
+    Box(double w, double h, double d) {
+        width = w;
+        height = h;
+        depth = d;
+    }
+
+    //расчитать и возвратить объем
+    double volume() {
+        return width * height * depth;
+    }
+}
+
+
+/*
+    BoxDemo6
+
 public class Box {
 
     double width;
@@ -22,7 +45,7 @@ public class Box {
     double volume() {
         return width * height * depth;
     }
-
+*/
 /*
     BoxDemo5
 
@@ -39,4 +62,4 @@ public class Box {
     }
 
 */
-}
+

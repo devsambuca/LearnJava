@@ -4,7 +4,7 @@ package main.java.net.proselyte.javase.chapter06;
  * @author Fominykh Vladimir
  *
  * Теперь метод volume() возвращает объем параллелепипеда
- */
+ *
 public class BoxDemo4 {
     public static void main(String[] args) {
         Box mybox1 = new Box();
@@ -16,7 +16,7 @@ public class BoxDemo4 {
         mybox1.height = 20;
         mybox1.depth = 15;
 
-        //* присвоить другие знчения переменным экземпляра mybox2 */
+        // присвоить другие знчения переменным экземпляра mybox2
         mybox2.width = 3;
         mybox2.height = 6;
         mybox2.depth = 9;
@@ -31,3 +31,4 @@ public class BoxDemo4 {
 
     }
 }
+*/

@@ -2,7 +2,7 @@ package main.java.net.proselyte.javase.chapter06;
 
 /**
  * @author Fominykh Vladimir
- */
+ *
 
 
 public class BoxDemo5 {
@@ -23,7 +23,7 @@ public class BoxDemo5 {
         System.out.println("Объем равен " + vol);
 
     }
-    */
+
     }
 }
-
+*/
