@@ -12,9 +12,9 @@ public class OverloadDemo {
 
     // Перегружаемый метод, проверяющий наличие
     // одного целочисленного параметра
-    void test(int a) {
-        System.out.println("a: " + a);
-    }
+//    void test(int a) {
+//        System.out.println("a: " + a);
+//    }
 
     // Перегружаемый метод, проверяющий наличие
     // двух целочисленных параметров
@@ -24,9 +24,13 @@ public class OverloadDemo {
 
     // Перегружаемый метод проверяющий наличие
     // параметра типа double
-    double test(double a) {
-        System.out.println("double a: " + a);
-        return a * a;
+    void test(double a) {
+        System.out.println("Внутреннее преобразование при вызове test(double) a: " + a);
     }
+
+//    double test(double a) {
+//        System.out.println("double a: " + a);
+//        return a * a;
+//    }
 
 }
