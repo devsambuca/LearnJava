@@ -3,8 +3,43 @@ package main.java.net.proselyte.javase.chapter06;
 /**
  * @author Fominykh Vladimir
  *
- * В программе применяется метод с параметрами
+ * В данном примере конструкторы определяются в классе Box
+ * для инициализации размеров параллелепипеда тремя разными способами
  */
+
+public class Box {
+    double width;
+    double height;
+    double depth;
+
+    // конструктор используемый при указании всех размеров
+    public Box(double width, double height, double depth) {
+
+        this.width = width;
+        this.height = height;
+        this.depth = depth;
+        }
+
+    // конструктор используемый когда ни один из размеров не указан
+    public Box() {
+        width = -1;
+        height = -1;
+        depth = -1;
+    }
+
+    // // конструктор используемый при создании куба
+    public Box(double len) {
+        width = height = depth = len;
+    }
+
+    // расчитать и возвратить объем
+    public double volume() {
+        return width * height * depth;
+    }
+
+}
+/*
+    BoxDemo 7
 
  class Box {
     double width;
@@ -23,7 +58,7 @@ package main.java.net.proselyte.javase.chapter06;
         return width * height * depth;
     }
 }
-
+*/
 
 /*
     BoxDemo6
