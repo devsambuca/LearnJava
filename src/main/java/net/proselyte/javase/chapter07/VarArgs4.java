@@ -24,4 +24,10 @@ public class VarArgs4 {
             System.out.print(x + " ");
         System.out.println();
     }
+
+    public static void main(String[] args) {
+        vaTest(1, 2, 3);
+        vaTest(true, false, false);
+        //vaTest();
+    }
 }
