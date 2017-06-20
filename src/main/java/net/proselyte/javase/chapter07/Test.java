@@ -3,22 +3,38 @@ package main.java.net.proselyte.javase.chapter07;
 /**
  * @author Fominykh Vladimir
  *
- * Объекты передаются по ссылке на них
+ *  Возврат объекта
  */
+
 public class Test {
-    int a, b;
+    int a;
 
-    Test(int i, int j) {
+    Test(int i){
         a = i;
-        b = j;
     }
-
-    //передать объект
-    void meth(Test o) {
-        o.a *= 2;
-        o.b /= 2;
+    Test incrByTen() {
+        Test temp = new Test(a + 10);
+        return temp;
     }
 }
+
+
+//  3)  Объекты передаются по ссылке на них
+//
+//public class Test {
+//    int a, b;
+//
+//    Test(int i, int j) {
+//        a = i;
+//        b = j;
+//    }
+//
+//    //передать объект
+//    void meth(Test o) {
+//        o.a *= 2;
+//        o.b /= 2;
+//    }
+//}
 
 
 
