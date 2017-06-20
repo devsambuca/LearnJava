@@ -5,18 +5,33 @@ package main.java.net.proselyte.javase.chapter07;
  *
  *  Возврат объекта
  */
-
 public class Test {
-    int a;
+    int a;              // доступ, определяемый по умолчанию
+    public int b;       // открытый доступ
+    private int c;      // закрытый доступ
 
-    Test(int i){
-        a = i;
+    // методы доступа к члену с данного класса
+    void setc(int i) { // доступ, определяемый по умолчанию
+        c = i;
     }
-    Test incrByTen() {
-        Test temp = new Test(a + 10);
-        return temp;
+    int getc() {        // получить значение члена с данного класса
+        return c;
     }
 }
+
+
+//  4)  Возврат объекта
+//public class Test {
+//    int a;
+//
+//    Test(int i){
+//        a = i;
+//    }
+//    Test incrByTen() {
+//        Test temp = new Test(a + 10);
+//        return temp;
+//    }
+//}
 
 
 //  3)  Объекты передаются по ссылке на них

@@ -20,6 +20,9 @@ public class TestStack {
         System.out.println("Содержимое стека mystack2:");
         for (int i = 0; i < 10; i++)
             System.out.println(mystack2.pop());
+        // эти операторы недопустимы
+//        mystack1.tos = -2;
+//        mystack2.stck[3] = 100;
         }
 
 
