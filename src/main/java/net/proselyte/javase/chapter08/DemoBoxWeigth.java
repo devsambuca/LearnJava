@@ -1,0 +1,21 @@
+package main.java.net.proselyte.javase.chapter08;
+
+/**
+ * @author Fominykh Vladimir
+ */
+public class DemoBoxWeigth {
+    public static void main(String[] args) {
+        BoxWeight mybox1 = new BoxWeight(10, 20, 15, 34.3);
+        BoxWeight mybox2 = new BoxWeight(2, 3, 4, 0.076);
+        double vol;
+
+        vol = mybox1.volume();
+        System.out.println("Объем mybox1 равен " + vol);
+        System.out.println("Вес mybox1 равен " + mybox1.weigth);
+        System.out.println();
+
+        vol = mybox2.volume();
+        System.out.println("Объем mybox2 равен " + vol);
+        System.out.println("Вес mybox2 равен " + mybox2.weigth);
+    }
+}
