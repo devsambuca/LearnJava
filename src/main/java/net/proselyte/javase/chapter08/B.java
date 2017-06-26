@@ -3,19 +3,28 @@ package main.java.net.proselyte.javase.chapter08;
 /**
  * @author Fominykh Vladimir
  */
-// Член j класса A в этом классе недоступен
+// создать подкласс путем вызова расширения класса A
+
 public class B extends A {
-    int i; // Этот член i скрывает член i из класса A
-
-    B (int a, int b) {
-        super.i = a; //член i из класса A
-        i = b;
+    B() {
+        System.out.println("B конструкторе B.");
     }
-    void show() {
-        System.out.println("Член i в суперклассе: " + super.i);
-        System.out.println("Член i В подклассе: " + i);
 
-    }
+
+
+
+// Член j класса A в этом классе недоступен
+// 3)   int i; // Этот член i скрывает член i из класса A
+//
+//    B (int a, int b) {
+//        super.i = a; //член i из класса A
+//        i = b;
+//    }
+//    void show() {
+//        System.out.println("Член i в суперклассе: " + super.i);
+//        System.out.println("Член i В подклассе: " + i);
+//
+//    }
 
 //    int total;
 //
