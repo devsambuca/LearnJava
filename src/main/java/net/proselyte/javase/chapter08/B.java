@@ -5,6 +5,18 @@ package main.java.net.proselyte.javase.chapter08;
  */
 // Член j класса A в этом классе недоступен
 public class B extends A {
+    int i; // Этот член i скрывает член i из класса A
+
+    B (int a, int b) {
+        super.i = a; //член i из класса A
+        i = b;
+    }
+    void show() {
+        System.out.println("Член i в суперклассе: " + super.i);
+        System.out.println("Член i В подклассе: " + i);
+
+    }
+
 //    int total;
 //
 //    void sum() {

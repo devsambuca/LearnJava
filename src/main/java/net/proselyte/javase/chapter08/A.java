@@ -4,13 +4,17 @@ package main.java.net.proselyte.javase.chapter08;
  * @author Fominykh Vladimir
  */
 public class A {
-    int i;          // этот член открыт по умолчанию,
-    private int j;  // а этот член закрыт в классе A
+    int i;
 
-    void setij (int x, int y) {
-        i = x;
-        j = y;
-    }
+
+
+//  2)  int i;          // этот член открыт по умолчанию,
+//    private int j;  // а этот член закрыт в классе A
+//
+//    void setij (int x, int y) {
+//        i = x;
+//        j = y;
+
 
 
 
