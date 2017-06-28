@@ -3,12 +3,25 @@ package main.java.net.proselyte.javase.chapter08;
 /**
  * @author Fominykh Vladimir
  */
-
-// продемонстрировать порядок вызова конструкторов
-public class A {
-    A() {
-        System.out.println("B конструкторе A");
+//переопределение методов
+public  class A {
+    int i, j;
+    A (int a, int b) {
+        i = a;
+        j = b;
     }
+
+    //вывести содержимое переменных i и j
+    void show() {
+        System.out.println("i и j: " + i + " " + j);
+    }
+
+// 4)
+//// продемонстрировать порядок вызова конструкторов
+//public class A {
+//    A() {
+//        System.out.println("B конструкторе A");
+//    }
 
 
 
