@@ -11,17 +11,47 @@ public class B extends A {
         k = c;
     }
 
-    // вывести содержимое переменной k с помощью метода,
-    // переопределяющего метод show() из класса A
+    // перегрузить метод show()
+    void show(String msg) {
 
-    void show() {
-        System.out.println("k: " + k);
+        System.out.println(msg + k);
     }
+
+//   6) }  int k;
+//    B(int a, int b, int c){
+//        super(a, b);
+//        k = c;
+//    }
+//
+//    // вывести содержимое переменной k с помощью метода,
+//    // переопределяющего метод show() из класса A
+//
+//    void show() {
+//        super.show(); // здесь вызывается метод show() из класса A
+//        System.out.println("k: " + k);
+//    }
+
+
+
+
+
+//  5) int k;
+//    B(int a, int b, int c){
+//        super(a, b);
+//        k = c;
+//    }
+//
+//    // вывести содержимое переменной k с помощью метода,
+//    // переопределяющего метод show() из класса A
+//
+//    void show() {
+//        System.out.println("k: " + k);
+//    }
 
 
 
 //// создать подкласс путем вызова расширения класса A
-//
+// 4)
 //public class B extends A {
 //    B() {
 //        System.out.println("B конструкторе B.");
@@ -41,7 +71,7 @@ public class B extends A {
 //
 //    }
 
-//    int total;
+// 2)   int total;
 //
 //    void sum() {
 //        total = i + j; //ОШИБКА: член j в этом классе недоступен
