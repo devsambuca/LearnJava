@@ -41,9 +41,19 @@ public class VectorDemo {
         // перечислить элементы вектора
         Enumeration<Integer> vEnum = v.elements();
 
+
         System.out.println("\nЭлементы вектора:");
         while (vEnum.hasMoreElements())
             System.out.print(vEnum.nextElement() + " ");
         System.out.println();
+
+        /*// Использовать усовершенствованный цикл for в стиле for each
+        // для вывода элементов вектора
+        // 2 example
+        System.out.println("\nЭлементы вектора:");
+        for (int i : v)
+            System.out.print(i + " ");
+
+        System.out.println();*/
     }
 }
