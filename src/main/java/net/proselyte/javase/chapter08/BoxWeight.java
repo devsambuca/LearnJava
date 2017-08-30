@@ -16,7 +16,7 @@ public class BoxWeight extends Box {
 
     // инициализировать поля width, height, depth
     // С помощью метода super()
-    BoxWeight(double w, double h, double d, double m) {
+  BoxWeight(double w, double h, double d, double m) {
         super(w, h ,d); // вызвать конструктор суперкласса
         weight = m;
     }
