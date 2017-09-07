@@ -2,6 +2,9 @@ package main.java.net.proselyte.javase.chapter20;
 import java.io.*;
 /**
  * @author Fominykh Vladimir
+ *
+ * В данном примере программа читает и выводит буквы "abc"
+ * сначала в нижнем регистре, а затем в верхнем.
  */
 public class ByteArrayInputStreamReset {
     public static void main(String[] args) {

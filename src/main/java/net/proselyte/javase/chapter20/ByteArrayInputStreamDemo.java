@@ -2,6 +2,8 @@ package main.java.net.proselyte.javase.chapter20;
 import java.io.*;
 /**
  * @author Fominykh Vladimir
+ *
+ * Продемонстрировать применение класса ByteArrayInputStream
  */
 public class ByteArrayInputStreamDemo {
     public static void main(String[] args) throws IOException {
