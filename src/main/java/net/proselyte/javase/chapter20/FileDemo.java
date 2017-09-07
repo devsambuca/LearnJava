@@ -13,7 +13,7 @@ public class FileDemo {
     }
 
     public static void main(String[] args) {
-        File f1 = new File("/java/COPYRIGHT");
+        File f1 = new File("/java/COPYRIGHT.txt");
         p("Имя файла: " + f1.getName());
         p("Путь: " + f1.getPath());
         p("Абсолютный путь: " + f1.getAbsolutePath());
