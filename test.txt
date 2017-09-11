@@ -1,1 +1,1 @@
-Эти данные должны быть выведены в массив
+This string must be in buffers

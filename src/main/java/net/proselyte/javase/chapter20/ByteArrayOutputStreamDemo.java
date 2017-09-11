@@ -10,7 +10,7 @@ import java.io.*;
 public class ByteArrayOutputStreamDemo {
     public static void main(String[] args) {
         ByteArrayOutputStream f = new ByteArrayOutputStream();
-        String s = "Эти данные должны быть выведены в массив";
+        String s = "This string must be in buffers";
         byte buf[] = s.getBytes();
 
         try {
