@@ -8,6 +8,8 @@ import java.nio.file.*;
 
 /**
  * @author Fominykh Vladimir
+ *
+ * Использовать сопоставление для чтения данных из файла
  */
 public class MappedChannelRead {
     public static void main(String[] args) {
