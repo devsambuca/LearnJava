@@ -10,6 +10,30 @@ public class Developer {
     private String surname;
     private String job;
     private double total;
+    private String asString = null;
+
+
+
+     public Developer (long id, String name, String surname, String job, double total) {
+         this.id = id;
+         this.name = name;
+         this.surname = surname;
+         this.job = job;
+         this.total = total;
+    }
+
+    @Override
+    public String toString() {
+        if (asString == null) {
+            asString = id + "," + surname + "," + job + "," + total;
+
+        }
+        return asString;
+    }
+
+    public Developer() {
+
+    }
 
 
     public long getId() {
