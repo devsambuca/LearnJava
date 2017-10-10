@@ -5,27 +5,71 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringTokenizer;
 
 /**
  * @author Fominykh Vladimir
  */
 public class FileWorker {
+
+    private static StringTokenizer strToken;
+    private static String line;
+    private static InputStreamReader inReader;
+    private static BufferedReader reader;
+    private static FileInputStream inFile;
+
     public static void main(String[] args) throws IOException {
+
+        initFile();
+        getData();
+
+
 
         LineNumberReader reader = new LineNumberReader(new FileReader("test.txt"));
         String line = null;
         List<String> list = new ArrayList<String>();
-        while ((line = reader.readLine()) !=null) {
-            list.add(line);
+        while ((line = reader.readLine()) != null) {
+
+
+            StringTokenizer stk = new StringTokenizer(line, ",");
+            String[] ar = new String[stk.countTokens()];
+            for (int i = 0; i < ar.length; i++) {
+                ar[i] = stk.nextToken();
+                System.out.print(ar[i]);
+            }
+        }
+    }
+
+    public static void initFile() throws IOException {
+        inFile = new FileInputStream("test.txt");
+        inReader = new InputStreamReader(inFile);
+        reader = new BufferedReader(inReader);
+    }
+
+public static void getData() throws IOException {
+
+            line = reader.readLine();
+
+        System.out.println(line);
+            System.out.println();
+
+            strToken = new StringTokenizer(line);
+
+            Developer d1 = new Developer();
+    long id = Long.parseLong(strToken.nextToken());
+    d1.setId(id);
+
+
         }
 
-        System.out.println(list);
+
 //
 //
 //
 
 
-    }
+
+
 }
 ////        Developer d2 = new Developer();
 ////        d1.setName("Ivan");
