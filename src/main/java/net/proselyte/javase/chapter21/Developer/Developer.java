@@ -6,29 +6,23 @@ package main.java.net.proselyte.javase.chapter21.Developer;
 public class Developer {
 
     private long id;
-    private String name;
-    private String surname;
-    private String job;
-    private double total;
-    private String asString = null;
+    private String firstName;
+    private String lastName;
+    private String position;
+    private double salary;
 
 
-
-     public Developer (long id, String name, String surname, String job, double total) {
-         this.id = id;
-         this.name = name;
-         this.surname = surname;
-         this.job = job;
-         this.total = total;
+    public Developer(long id, String firstName, String lastName, String position, double salary) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.position = position;
+        this.salary = salary;
     }
 
     @Override
     public String toString() {
-        if (asString == null) {
-            asString = id + "," + surname + "," + job + "," + total;
-
-        }
-        return asString;
+        return id + ", " + firstName + ", " + lastName + ", " + position + ", " + salary;
     }
 
     public Developer() {
@@ -36,7 +30,7 @@ public class Developer {
     }
 
 
-    public long getId(long l) {
+    public long getId() {
         return id;
     }
 
@@ -44,38 +38,39 @@ public class Developer {
         this.id = id;
     }
 
-    public String getName(String s) {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getLastName() {
+        return lastName;
+
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public String getJob() {
-        return job;
+    public String getPosition() {
+        return lastName;
     }
 
-    public void setJob(String job) {
-        this.job = job;
+    public void setPosition(String position) {
+        this.position = position;
     }
 
-    public double getTotal() {
-        return total;
+    public double getSalary() {
+        return salary;
     }
 
-    public void setTotal(double total) {
-        this.total = total;
+    public void setSalary(double salary) {
+        this.salary = salary;
     }
-
 
 
 }
+
