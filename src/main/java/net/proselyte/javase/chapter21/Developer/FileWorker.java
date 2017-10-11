@@ -1,6 +1,7 @@
 package main.java.net.proselyte.javase.chapter21.Developer;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -12,18 +13,44 @@ import java.util.StringTokenizer;
  */
 public class FileWorker {
 
-    private static StringTokenizer strToken;
-    private static String line;
-    private static InputStreamReader inReader;
-    private static BufferedReader reader;
-    private static FileInputStream inFile;
+
+    public static String[] divide(String s) {
+        ArrayList<String> tmp = new ArrayList<String>();
+        int i = 0;
+        boolean f = false;
+
+        for (int j = 0; j < s.length(); j++) {
+            if (s.charAt(j) == ' ') {
+                if (j > i) {
+                    tmp.add(s.substring(i, j));
+                }
+                i = j + 1;
+            }
+        }
+        if (i < s.length()) {
+            tmp.add(s.substring(i));
+        }
+        return tmp.toArray(new String[tmp.size()]);
+    }
+
+
+//    private static StringTokenizer strToken;
+//    private static String line;
+//    private static InputStreamReader inReader;
+//    private static BufferedReader reader;
+//    private static FileInputStream inFile;
 
     public static void main(String[] args) throws IOException {
 
-        initFile();
-        getData();
+        String s = "   1  aaa  2 bbbbbb 3    cccc  4 5 6     7     x";
+        String[] r = divide(s);
+        for (int i = 0; i < r.length; i++)
+            System.out.println('"' + r[i] + '"');
 
+    Developer d1 = new Developer();
 
+//        initFile();
+//        getData();
 
         LineNumberReader reader = new LineNumberReader(new FileReader("test.txt"));
         String line = null;
@@ -35,32 +62,41 @@ public class FileWorker {
             String[] ar = new String[stk.countTokens()];
             for (int i = 0; i < ar.length; i++) {
                 ar[i] = stk.nextToken();
-                System.out.print(ar[i]);
+
             }
+
+            d1.getId(Integer.parseInt(ar[0]));
+            d1.getName(ar[1]);
+            d1.setName("Alena");
+            System.out.println(ar[0] + d1.getName(ar[1]));
         }
+
     }
 
-    public static void initFile() throws IOException {
-        inFile = new FileInputStream("test.txt");
-        inReader = new InputStreamReader(inFile);
-        reader = new BufferedReader(inReader);
-    }
-
-public static void getData() throws IOException {
-
-            line = reader.readLine();
-
-        System.out.println(line);
-            System.out.println();
-
-            strToken = new StringTokenizer(line);
-
-            Developer d1 = new Developer();
-    long id = Long.parseLong(strToken.nextToken());
-    d1.setId(id);
 
 
-        }
+
+//    public static void initFile() throws IOException {
+//        inFile = new FileInputStream("test.txt");
+//        inReader = new InputStreamReader(inFile);
+//        reader = new BufferedReader(inReader);
+//    }
+//
+//public static void getData() throws IOException {
+//
+//            line = reader.readLine();
+//
+//        System.out.println(line);
+//            System.out.println();
+//
+//            strToken = new StringTokenizer(line);
+//
+//            Developer d1 = new Developer();
+//    long id = Long.parseLong(strToken.nextToken());
+//    d1.setId(id);
+//
+//
+//        }
 
 
 //

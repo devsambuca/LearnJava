@@ -44,7 +44,7 @@ public class Developer {
         this.id = id;
     }
 
-    public String getName() {
+    public String getName(String s) {
         return name;
     }
 
