@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.StringTokenizer;
 
 /**
@@ -13,6 +14,33 @@ import java.util.StringTokenizer;
  */
 public class DeveloperDAO {
 
+    public static void getData() {
+        try {
+            // find the file with the developer date
+            File devFile = new File("test.txt");
+
+            Scanner devScanner = new Scanner(devFile);
+
+            String nextLine = devScanner.nextLine();
+
+            String[] devData = nextLine.split(",");
+
+            String strId = devData[0];
+            String strFirstName = devData[1];
+            String strLastName = devData[2];
+            String strPosition = devData[3];
+            String strSalary = devData[4];
+
+            Developer developer = new Developer();
+            long lgId = Long.parseLong(strId);
+            developer.setId(lgId);
+
+            double dbSalary = Double.parseDouble(strSalary);
+            developer.setSalary(dbSalary);
+        } catch (FileNotFoundException ex) {
+            System.err.println("File not found");
+        }
+    }
 
 //    public static String[] divide(String s) {
 //        ArrayList<String> tmp = new ArrayList<String>();
@@ -33,12 +61,12 @@ public class DeveloperDAO {
 //        return tmp.toArray(new String[tmp.size()]);
 //    }
 
-
-    private static StringTokenizer strToken;
-    private static String line;
-    private static InputStreamReader inReader;
-    private static BufferedReader reader;
-    private static FileInputStream inFile;
+//
+//    private static StringTokenizer strToken;
+//    private static String line;
+//    private static InputStreamReader inReader;
+//    private static BufferedReader reader;
+//    private static FileInputStream inFile;
 
 //        String s = "   1  aaa  2 bbbbbb 3    cccc  4 5 6     7     x";
 //        String[] r = divide(s);
@@ -64,29 +92,29 @@ public class DeveloperDAO {
 //
 //        }
 //    }
-    }
+//    }
+//
+//    public static void initFile() throws IOException {
+//        inFile = new FileInputStream("test.txt");
+//        inReader = new InputStreamReader(inFile);
+//        reader = new BufferedReader(inReader);
+//    }
 
-    public static void initFile() throws IOException {
-        inFile = new FileInputStream("test.txt");
-        inReader = new InputStreamReader(inFile);
-        reader = new BufferedReader(inReader);
-    }
-
-    public static void getData() {
-        try {
-
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
-                String[] list = line.split(",");
-            }
-        } catch (IOException e) {
-            System.out.println(e.getMessage() + " Error reading file");
-        } finally {
-            System.exit(0);
-            strToken = new StringTokenizer(line);
-        }
-    }
-}
+//    public static void getData() {
+//        try {
+//
+//            while ((line = reader.readLine()) != null) {
+//                System.out.println(line);
+//                String[] list = line.split(",");
+//            }
+//        } catch (IOException e) {
+//            System.out.println(e.getMessage() + " Error reading file");
+//        } finally {
+//            System.exit(0);
+//            strToken = new StringTokenizer(line);
+//        }
+//    }
+//}
 
 
 // long id = Long.parseLong(strToken.nextToken());
