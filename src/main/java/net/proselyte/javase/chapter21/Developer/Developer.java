@@ -11,7 +11,6 @@ public class Developer {
     private String position;
     private double salary;
 
-
     public Developer(long id, String firstName, String lastName, String position, double salary) {
         this.id = id;
         this.firstName = firstName;
@@ -26,11 +25,7 @@ public class Developer {
     }
 
     public Developer() {
-
     }
-
-
-
 
     public long getId() {
         return id;
@@ -50,7 +45,6 @@ public class Developer {
 
     public String getLastName() {
         return lastName;
-
     }
 
     public void setLastName(String lastName) {
@@ -72,7 +66,6 @@ public class Developer {
     public void setSalary(double salary) {
         this.salary = salary;
     }
-
 
 }
 
