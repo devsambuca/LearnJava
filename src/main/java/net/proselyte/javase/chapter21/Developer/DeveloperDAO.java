@@ -14,9 +14,7 @@ public class DeveloperDAO {
             // find the file with the developer date
             File devFile = new File("test.txt");
 
-
             Scanner devScanner = new Scanner(devFile);
-
 
             while (devScanner.hasNext()) {
                 String nextLine = devScanner.nextLine();
@@ -25,7 +23,6 @@ public class DeveloperDAO {
             }
             for (Developer dev : devList) {
                 System.out.println(dev);
-
             }
             return String.valueOf(devList);
 
@@ -35,14 +32,32 @@ public class DeveloperDAO {
         return null;
     }
 
+    public Developer getById(Long id) {
+        for (Developer dev : devList) {
+            if (dev.getId() == id) {
+                System.out.println(dev);
+                return dev;
+            }
+        }
+        return null;
+    }
 
-//    public long getById(Long id) {
-//        for (Developer dev : devList) {
-//            if (id.equals(dev)) {
-//
-//            }
-//        }
-//        return Long.parseLong(null);
-//    }
+    public void remove(Long id) {
+        Iterator<Developer> iDev = devList.iterator();
+        while (iDev.hasNext()) {
+            Developer s = iDev.next();
+            if (s.getId() == id) {
+                iDev.remove();
+            }
+        }
+        for (Developer dev : devList)
+            System.out.println(dev);
+    }
+
+    public void update(Long id) {
+        getById(id);
+        remove(id);
+
+    }
 }
 
