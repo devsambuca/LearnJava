@@ -56,7 +56,28 @@ public class DeveloperDAO {
 
     public void update(Long id) {
         getById(id);
+        System.out.println();
         remove(id);
+
+        Writer writer = null;
+        try {
+            writer = new FileWriter("file.txt");
+            for (Developer line : devList) {
+                writer.write(String.valueOf(line));
+                writer.write(System.getProperty("line.separator"));
+            }
+            writer.flush();
+        } catch (Exception e) {
+
+        } finally {
+            if (writer != null) {
+                try {
+                    writer.close();
+                } catch (IOException ex) {
+                }
+            }
+        }
+
 
     }
 }

@@ -9,10 +9,15 @@ public class DeveloperApp {
 
         DeveloperDAO d1 = new DeveloperDAO();
         d1.save();
+        System.out.println();
         d1.getById(1l);
+        System.out.println();
         d1.remove(5l);
-        d1.update(2l);
-
+        System.out.println();
+        d1.remove(2l);
+        d1.getById(2l);
+        System.out.println();
+        d1.update(6l);
 
     }
 }
