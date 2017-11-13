@@ -5,9 +5,10 @@ import java.util.concurrent.Semaphore;
 /**
  * @author Fominykh Vladimir
  */
-public class DecThread implements Runnable{
+public class DecThread implements Runnable {
     String name;
     Semaphore sem;
+
     DecThread(Semaphore s, String n) {
         sem = s;
         name = n;
