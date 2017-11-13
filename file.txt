@@ -1,3 +1,0 @@
-1, Ivan, Petrov, PHP Developer, 20000.0
-3, Vladimir, Fominykh, Java Developer, 100000.0
-4, Ivan, Petrov, PHP Developer, 20000.0
