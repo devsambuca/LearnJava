@@ -11,6 +11,5 @@ public class SemDemo {
 
         new IncThread(sem, "A");
         new DecThread(sem, "B");
-
     }
 }
