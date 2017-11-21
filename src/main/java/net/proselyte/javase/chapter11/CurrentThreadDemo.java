@@ -1,6 +1,8 @@
 package main.java.net.proselyte.javase.chapter11;
 
 /**
+ * Управление главным потоком исполнения
+ *
  * Created by smb on 21.11.2017.
  */
 public class CurrentThreadDemo {
